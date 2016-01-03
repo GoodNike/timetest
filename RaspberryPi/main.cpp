@@ -2,11 +2,13 @@
  * @copyright   Николай Крашенинников
  * @project     Bottom project
  * @file        main.cpp
- * @brief       Программа для оценки точности выдерживания RaspberryPi собственной дискретности.
+ * @brief       Программа для оценки точности выдерживания Raspberry Pi собственной дискретности.
  *
  * Программа циклично меняет состояние пина GPIO с HIGH на LOW и обратно. Пользователь задает номер
  * пина для выдачи, задает дискретность работы, мс, через командную строку. В случае успешного
  * запуска, программа не возвращает управление.
+ * 
+ * @note Нумерация пинов GPIO в соответствии с http://elinux.org/RPi_Low-level_peripherals#Model_A.2B.2C_B.2B_and_B2
  */
 
 #include <iostream>
@@ -44,8 +46,7 @@ int main(int argc, char **argv)
     bcm2835_gpio_fsel(pin, BCM2835_GPIO_FSEL_OUTP);
     uint8_t pin_level = HIGH;
 
-    while (true)
-    {
+    while (true) {
         bcm2835_gpio_write(pin, pin_level);
         if (pin_level == HIGH) {
             pin_level = LOW;
