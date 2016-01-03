@@ -1,6 +1,17 @@
+/**
+* @copyright   Николай Крашенинников
+* @project     Bottom project
+* @file        timetest.ino
+* @brief       Программа для оценки точности выдерживания Raspberry Pi собственной дискретности, часть для Arduino.
+*
+* Файл реализации точки страта проектов на Arduino: функции #setup() и #loop().
+*/
+
+#include <limits.h>
+
 #include "library.h"
 
-#define LENGTH  ( 256 )
+#define LENGTH  ( 256 + 128 )
 #define PIN     ( 2 )
 
 unsigned long mass[LENGTH];
@@ -35,10 +46,32 @@ void loop()
 void serial_print_info()
 {
     Serial.println();
-    Serial.println(F("DATA: "));
+    Serial.print(F("DATA: "));
     Serial.println(pos);
+
+    unsigned long avg = 0;
+    unsigned long min = ULONG_MAX;
+    unsigned long max = 0;
+    unsigned long diff;
     for (size_t i = 1; i < pos; ++i) {
-        Serial.println(mass[i] - mass[i - 1]);
+        diff = mass[i] - mass[i - 1];
+        Serial.println(diff);
+        if (diff > max) {
+            max = diff;
+        }
+        if (diff < min) {
+            min = diff;
+        }
+        avg += diff;
     }
+    avg /= pos - 1;
+
+    Serial.print(F("Average: "));
+    Serial.println(avg);
+    Serial.print(F("MIN: "));
+    Serial.println(min);
+    Serial.print(F("MAX: "));
+    Serial.println(max);
+
     Serial.println();
 }

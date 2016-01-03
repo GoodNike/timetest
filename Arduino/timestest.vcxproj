@@ -45,10 +45,10 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Program Files\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files\Arduino\hardware\arduino\avr\variants\eightanaloginputs;C:\projects\timestest\timestest;C:\Program Files\Arduino\libraries;C:\Program Files\Arduino\hardware\arduino\avr\libraries;C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\q023pcwn.3cj\Micro Platforms\default\debuggers;C:\Users\Work\Documents\Arduino\libraries;C:\Program Files\Arduino\hardware\tools\avr/avr/include/;C:\Program Files\Arduino\hardware\tools\avr//avr/include/avr/;C:\Program Files\Arduino\hardware\tools\avr/lib\gcc\avr\4.8.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>C:\projects\timestest\timestest\__vm\.timestest.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>C:\Program Files\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files\Arduino\hardware\arduino\avr\variants\eightanaloginputs;C:\projects\timetest\Arduino;C:\Program Files\Arduino\libraries;C:\Program Files\Arduino\hardware\arduino\avr\libraries;C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\q023pcwn.3cj\Micro Platforms\default\debuggers;C:\Users\Work\Documents\Arduino\libraries;C:\Program Files\Arduino\hardware\tools\avr/avr/include/;C:\Program Files\Arduino\hardware\tools\avr//avr/include/avr/;C:\Program Files\Arduino\hardware\tools\avr/lib\gcc\avr\4.8.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>C:\projects\timetest\Arduino\__vm\.Arduino.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
-      <PreprocessorDefinitions>__AVR_ATmega328p__;__AVR_ATmega328P__;F_CPU=16000000L;ARDUINO=166;ARDUINO_AVR_NANO;ARDUINO_ARCH_AVR;__cplusplus;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__AVR_ATmega328p__;__AVR_ATmega328P__;_VMDEBUG=1;F_CPU=16000000L;ARDUINO=166;ARDUINO_AVR_NANO;ARDUINO_ARCH_AVR;__cplusplus;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -61,8 +61,8 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Program Files\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files\Arduino\hardware\arduino\avr\variants\eightanaloginputs;C:\projects\timestest\timestest;C:\Program Files\Arduino\libraries;C:\Program Files\Arduino\hardware\arduino\avr\libraries;C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\q023pcwn.3cj\Micro Platforms\default\debuggers;C:\Users\Work\Documents\Arduino\libraries;C:\projects\timestest\timestest;C:\Program Files\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files\Arduino\hardware\arduino\avr\variants\eightanaloginputs;C:\Program Files\Arduino\hardware\tools\avr/avr/include/;C:\Program Files\Arduino\hardware\tools\avr//avr/include/avr/;C:\Program Files\Arduino\hardware\tools\avr/lib\gcc\avr\4.8.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>C:\projects\timestest\timestest\__vm\.timestest.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <AdditionalIncludeDirectories>C:\Program Files\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files\Arduino\hardware\arduino\avr\variants\eightanaloginputs;C:\projects\timetest\Arduino;C:\Program Files\Arduino\libraries;C:\Program Files\Arduino\hardware\arduino\avr\libraries;C:\Program Files\Microsoft Visual Studio 12.0\Common7\IDE\Extensions\q023pcwn.3cj\Micro Platforms\default\debuggers;C:\Users\Work\Documents\Arduino\libraries;C:\projects\timetest\Arduino;C:\Program Files\Arduino\hardware\arduino\avr\cores\arduino;C:\Program Files\Arduino\hardware\arduino\avr\variants\eightanaloginputs;C:\Program Files\Arduino\hardware\tools\avr/avr/include/;C:\Program Files\Arduino\hardware\tools\avr//avr/include/avr/;C:\Program Files\Arduino\hardware\tools\avr/lib\gcc\avr\4.8.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>C:\projects\timetest\Arduino\__vm\.Arduino.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <IgnoreStandardIncludePath>true</IgnoreStandardIncludePath>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <PreprocessorDefinitions>__AVR_ATmega328p__;__AVR_ATmega328P__;F_CPU=16000000L;ARDUINO=166;ARDUINO_AVR_NANO;ARDUINO_ARCH_AVR;__cplusplus;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="library.h" />
+    <ClInclude Include="__vm\.Arduino.vsarduino.h" />
     <ClInclude Include="__vm\.timestest.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
