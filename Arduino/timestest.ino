@@ -1,11 +1,11 @@
 /**
-* @copyright   Николай Крашенинников
-* @project     Bottom project
-* @file        timetest.ino
-* @brief       Программа для оценки точности выдерживания Raspberry Pi собственной дискретности, часть для Arduino.
-*
-* Файл реализации точки страта проектов на Arduino: функции #setup() и #loop().
-*/
+ * @copyright   Николай Крашенинников
+ * @project     Bottom project
+ * @file        timetest.ino
+ * @brief       Программа для оценки точности выдерживания Raspberry Pi собственной дискретности, часть для Arduino.
+ *
+ * Файл реализации точки страта проектов на Arduino: функции #setup() и #loop().
+ */
 
 #include <limits.h>
 
