@@ -38,8 +38,14 @@ void setup()
 void loop()
 {
     if (l_kbhit()) {
-        serial_print_info();
-        l_getch();
+        switch (l_getch()) {
+        case 'r':
+        case 'R':
+            reset_loop();
+            break;
+        default:
+            serial_print_info();
+        }
     }
 }
 
@@ -74,4 +80,12 @@ void serial_print_info()
     Serial.println(max);
 
     Serial.println();
+}
+
+void reset_loop()
+{
+    noInterrupts();
+    pos = 0;
+    Serial.println(F("Reset completed"));
+    interrupts();
 }
